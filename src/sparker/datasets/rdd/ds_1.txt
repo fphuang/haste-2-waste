@@ -1,0 +1,4 @@
+Spark session internally creates a sparkContext variable of SparkContext.
+You can create multiple SparkSession objects but only one SparkContext per JVM.
+In case if you want to create another new SparkContext you should stop
+existing Sparkcontext (using stop()) before creating a new one.
