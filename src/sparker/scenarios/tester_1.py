@@ -50,11 +50,11 @@ def try_csv():
     rows = rdd.filter(lambda line: line != header).map(lambda line: str(line).split(",")[:5])
     df = sc.createDataFrame(rows, schema)
 
-    print("RDD data: ")
+    print("rdd data: ")
     for row in rdd.collect():
         print(row)
 
-    print("DataFrame Data: ")
+    print("DataFrame data: ")
     df.show(truncate=False)
 
 
